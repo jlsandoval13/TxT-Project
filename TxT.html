@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+<meta charset = utf-8 />
+<style>
+body{ background-color: lightblue; }
+h3{ color: black; font-family: monotype corsiva; font-size: 36px; text-align: center; }
+h4{ color: black; font-family: times new roman; font-size: 24px; text-align: left; }
+p { color: black; font-family: times new roman; font-size: 24px; text-align: left; }
+</style>
+</head>
+
+<body>
+<form>
+<h3> Welcome </h3>
+<h4> Directions: </h4>
+<p> Please input any 3 numbers in the following spaces. When done, press the button to sort your numbers in ascending order.</p>
+
+<input id = "n1" type = "text" /> <br />
+<input id = "n2" type = "text" /> <br />
+<input id = "n3" type = "text" /> <br />
+</form>
+
+<button onclick = "ascend()"> Sort it! </button>
+<p id = "answer"></p>
+
+<script type = "text/javascript">
+var num = [document.getElementById("n1"),document.getElementById("n2"),document.getElementById("n3)];
+function ascend() {
+num.sort(function(a,b){return a - b}) };
+document.getElementById("answer").innerHTML = num;
+</script>
+
+</body>
+</html>
